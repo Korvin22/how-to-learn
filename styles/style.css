@@ -82,25 +82,28 @@
 
 .two-columns{
   display:flex;
-  align-items:center;
   justify-content:space-between;
+  width:80%;
+  min-width:784px;
+  margin:auto;
+  padding:auto;
 }
 .two-columns__brief{
-  align-self:flex-start;
   width:175px;
   color:#2f80ed;
   font-size:18px;
   font-weight:500;
   line-height:1.2;
+  top:0;
 }
 
 .two-columns__main-text{
-  width:80vw;
-  min-width:784px;
   text-align:justify;
   font-size:24px;
   font-weight:500;
   line-height:34px;
+  margin:auto;
+  width:80%;
 }
 .two-columns__span-accent{
   font-size:24px;
@@ -134,7 +137,6 @@
 }
 
 .table{
-  padding-top:60px;
   display:flex;
   align-items:space-between;
   justify-content:space-between;
@@ -147,6 +149,7 @@
   width:250px;
   align-self:flex-start;
   justify-content:space-evenly;
+  padding-top:60px;
 }
 
 .table__heading{
@@ -167,12 +170,203 @@ font-weight:bold;
 
 .feynman{
   margin-top:100px;
-  margin-bottom:100px;
+  min-height:890px;
+  background: #f2f2f2 url(../images/feynman.png) no-repeat bottom left;
+  font-size:20px;
 }
+
+.feynman__title{
+  text-align:center;
+  font-size:120px;
+  line-height:1.15;
+  font-weight:bold;
+  margin-bottom:70px;
+  width:648px
+  padding-right:auto;
+  padding-left:auto;
+  position:relative;
+}
+
+.feynman__subtitle{
+  text-align:center;
+  font-size:36px;
+  line-height:51px;
+  font-weight:normal;
+}
+
+.feynman__link{
+  position:absolute;
+  right:0px;
+  height:50%;
+  font-size:36px;
+  line-height:51px;
+  font-weight:normal;
+  cursor:pointer;
+  color:#2f80ed;
+}
+
+.feynman__picture{
+  width:867px;
+  height:637px;
+  text-align:center;
+  position:relative;
+}
+
+.kaufman{
+  overflow:hidden;
+  background-color:black;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  padding-bottom:90px;
+  padding-top:90px;
+  z-index:-1;
+  position:relative;
+}
+
+.section-title_theme_dark{
+  color:white;
+  line-height:1.15;
+  font-size:60px;
+  font-weight:bold;
+}
+
+.section-subtitle_theme_dark{
+  color:white;
+  margin-bottom:0px;
+  line-height:34px;
+  font-size:24px;
+  font-weight:normal;
+}
+
 /* и элемента с модификатором вида ключ-значение */
 .table__cell_theme_dark {
   width: 200px;
   color: white;
   margin-right: 0;
-  margin-top: 80px;
+  padding-top: 80px;
+  z-index:1;
+}
+
+.table__heading_theme_dark{
+  line-height:1.15;
+  font-size:24px;
+  font-weight:normal;
+}
+
+.table__text_theme_dark{
+  line-height:1.2;
+  font-size:18px;
+  font-weight:normal;
+}
+
+.kaufman__triangle{
+  width:877px;
+  height:877px;
+  right:-210px;
+  background-image: url(../images/kaufman-triangle.svg);
+  top:0px;
+  z-index:0;
+  position:absolute;
+}
+
+.footer{
+  background-color:black;
+  min-height:350px;
+  position:relative;
+}
+
+.footer__columns{
+  padding-top:60px;
+  padding-bottom:40px;
+  color:white;
+  display:flex;
+  margin:auto;
+  justify-content:space-between;
+  width:90%;
+  min-height:350px;
+}
+
+.logo_place_footer{
+  align-self:flex-start;
+
+}
+
+.footer__author{
+  padding-bottom:18px;
+  padding-top:332px;
+  left:0;
+  bottom:0;
+  position:relative;
+  line-height:25px;
+  font-size:18px;
+  font-weight:normal;
+}
+
+.footer__column_content_copyright{
+  flex-basis:711px;
+  min-height:350px;
+}
+
+.footer__list{
+  padding-top:20px;
+}
+
+.footer__column-links{
+  list-style:none;
+  padding-top:20px;
+  padding-bottom:16px;
+  cursor:pointer;
+  color:white;
+  margin:0;
+  padding-left:0px;
+  line-height:30px;
+  font-size:18px;
+  font-weight:normal;
+
+}
+
+.footer__column-link{
+  list-style:none;
+  padding-top:20px;
+  padding-bottom:16px;
+  cursor:pointer;
+  color:white;
+  margin:0;
+  padding-left:0px;
+  line-height:30px;
+  font-size:18px;
+  font-weight:normal;
+
+}
+
+.list__image{
+  color:white;
+}
+
+.footer__column-heading{
+  line-height:30px;
+  font-size:18px;
+  font-weight:bold;
+}
+
+.footer__social-icons{
+  line-height:30px;
+  font-size:18px;
+  font-weight:bold;
+}
+
+.footer__column_content_info{
+  padding:0;
+
+}
+
+.footer__column_social{
+
+  padding:0;
+}
+
+.list__text{
+  color:white;
+  text-decoration:none;
 }
