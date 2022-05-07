@@ -107,13 +107,14 @@
   min-width:784px;
 }
 
-.two-columns__paragraph:first-of-type {
-  margin:0;
-}
-
+/*отступы у параграфа сброшены, поставлен отступ снизу в соответствии с брифом*/
 .two-columns__paragraph{
 margin-bottom:30px;
+margin-top:0;
+margin-left:0;
+margin-right:0;
 }
+
 
 .two-columns__span-accent{
   font-size:24px;
@@ -152,6 +153,7 @@ margin-bottom:30px;
   width:1100px;
   flex-wrap:wrap;
   list-style:none;
+  padding:0;
   margin:0;
 }
 
@@ -162,19 +164,17 @@ margin-bottom:30px;
 }
 
 .table__heading{
-margin:0 0 20px 0;
 line-height:1.15;
 font-size:24px;
 font-weight:bold;
-
+margin:0;
 }
 
 .table__text{
   line-height:1.2;
   font-size:18px;
   font-weight:normal;
-  margin-bottom:20px;
-  margin:0;
+  margin:20px 0 0 0;
 }
 
 
@@ -182,7 +182,9 @@ font-weight:bold;
   margin-top:100px;
   padding-top:100px;
   min-height:890px;
+  box-sizing:border-box;
   background: #f2f2f2 url(../images/feynman.png) no-repeat bottom left;
+  position:relative;
 }
 
 .feynman__title{
@@ -204,7 +206,7 @@ font-weight:bold;
 .feynman__link{
   position:absolute;
   right:48px;
-  top:auto;
+  top:50%;
   font-size:36px;
   line-height:51px;
   font-weight:normal;
@@ -268,17 +270,17 @@ font-weight:bold;
   top:0px;
   z-index:-1;
   position:absolute;
-  object-fit:contain;
+  background-size:contain;
 }
 
 .footer{
   background-color:#1f1f1f;
   /*Минимальная высота блока footer: 350px;*/
   min-height:350px;
-  height:350px;
   position:relative;
   padding-top:60px;
   padding-bottom:40px;
+  box-sizing:border-box;
 }
 
 .footer__columns{
@@ -288,6 +290,7 @@ font-weight:bold;
   width:90%;
   margin-left:auto;
   margin-right:auto;
+  min-height:350px;
 }
 
 .footer__author{
@@ -296,13 +299,15 @@ font-weight:bold;
   line-height:25px;
   font-size:18px;
   font-weight:normal;
-  align-self:flex-end;
+  margin:0;
+  align-self:flex-start;
 }
 
 .footer__column_content_copyright{
   flex-basis:711px;
   display:flex;
-  justify-content:stretch;
+  flex-direction:column;
+  justify-content:space-between;
 }
 
 .logo_place_footer{
@@ -343,6 +348,8 @@ font-weight:bold;
   line-height:30px;
   font-size:18px;
   font-weight:bold;
+  margin:0;
+  padding:0;
 }
 
 
