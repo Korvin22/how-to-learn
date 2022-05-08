@@ -34,7 +34,7 @@
 
 .header__title {
   margin-left:64px;
-  width:730px;
+  max-width:730px;
   font-weight:bold;
   font-size:102px;
   line-height:96px;
@@ -43,7 +43,7 @@
 }
 
 .header__subtitle{
-  width:388px;
+  max-width:388px;
   margin:0;
   padding:0;
   left:64px;
@@ -109,11 +109,15 @@
 
 /*отступы у параграфа сброшены, поставлен отступ снизу в соответствии с брифом*/
 .two-columns__paragraph{
-margin-bottom:30px;
-margin-top:0;
-margin-left:0;
-margin-right:0;
+margin:0 0 30px 0;
 }
+
+/*лишний отступ у нижнего параграфа убрал псевдоклассом,
+в панели разработчика проверил блок two-columns и элементы внутри него -
+- наследуемые отступы отсутствуют*/
+.two-columns__paragraph:last-of-type{
+  margin:0;}
+
 
 
 .two-columns__span-accent{
@@ -283,6 +287,15 @@ margin:0;
   box-sizing:border-box;
 }
 
+/*посмотрел в панели разработчика - min-height 350 растянуло футер
+так как был указан box-sizing, если указать значение min-height 250 px то все по брифу.
+ Я пытался избежать этого и растянуть footer__columns другими способами: align-items:stretch,
+ align-items:space-between, пытался с помощью align-self отодвинуть блок с автором вниз - безрезультатно,
+ блок растягивается до высоты родителя footer__columns. При этом footer__columns состоит из 3 элементов, которые
+ спозиционированы по основной оси и флекс не дает мне растянуть размер по вспомогательной оси до размера родителя,
+ хотя по идее align-items:stretch должен это делать. уже ума не приложу как это еще сделать - все, что было в
+ доке прочел, гуглил и исследовал хабр) К сожалению единственный способ сделать по брифу для меня оказался
+ min-height:250px - тогда все верно*/
 .footer__columns{
   color:white;
   display:flex;
@@ -290,7 +303,8 @@ margin:0;
   width:90%;
   margin-left:auto;
   margin-right:auto;
-  min-height:350px;
+  align-items:stretch;
+  min-height:250px;
 }
 
 .footer__author{
@@ -300,7 +314,6 @@ margin:0;
   font-size:18px;
   font-weight:normal;
   margin:0;
-  align-self:flex-start;
 }
 
 .footer__column_content_copyright{
