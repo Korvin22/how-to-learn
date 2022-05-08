@@ -55,6 +55,20 @@
   font-weight:normal;
 }
 
+/*Спасибо большое за ревью, Ваши ссылки на материалы все прочитал, постарался исправить "можно лучше". Ваша обратная
+связь для меня была полезной и развивающей. Я глубже вник в верстку, хотя несколько раз застревал на 3-4-5 часов
+пытаясь найти ответы на элементарные вопросы (например как растянуть footer__columns до размера родителя).
+Зато попутно много чего прочитал)
+ */
+.header__link{
+  text-decoration:none;
+  z-index:4;
+  font-size:18px;
+  line-height:25px;
+  font-weight:normal;
+  color:#2f80ed;
+}
+
 .header__main-illustration{
   position:absolute;
   width:765px;
@@ -285,6 +299,7 @@ margin:0;
   padding-top:60px;
   padding-bottom:40px;
   box-sizing:border-box;
+  display:flex;
 }
 
 /*посмотрел в панели разработчика - min-height 350 растянуло футер
@@ -304,7 +319,6 @@ margin:0;
   margin-left:auto;
   margin-right:auto;
   align-items:stretch;
-  min-height:250px;
 }
 
 .footer__author{
