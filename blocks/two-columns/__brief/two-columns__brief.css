@@ -1,0 +1,10 @@
+.two-columns__brief{
+  margin:0;
+  padding:0;
+  width:175px;
+  color:#2f80ed;
+  font-size:18px;
+  line-height:1.2;
+  /*в соответствии с брифом шрифт нормальный*/
+  font-weight:normal;
+}
